@@ -17,6 +17,7 @@ import {
   FaTimes // Close mobile menu
 } from "react-icons/fa";
 import { useState } from "react";
+import Link from "next/link";
 
 const montserrat = Montserrat({ weight: ['400', '500', '600', '700'] });
 export default function Home() {
@@ -48,7 +49,9 @@ export default function Home() {
         
         {/* Desktop Buttons */}
         <div className="hidden md:flex gap-4">
-          <button className="text-sm px-4 py-2 border border-blue-500 rounded-lg hover:bg-blue-500/10 transition-all duration-300">Login</button>
+          <button className="text-sm px-4 py-2 border border-blue-500 rounded-lg hover:bg-blue-500/10 transition-all duration-300">
+          <Link href="/login">Login</Link>
+          </button>
           <button className="bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300">Buy Now</button>
         </div>
         
