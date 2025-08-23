@@ -40,9 +40,11 @@ export default function LoginOptions() {
             </li>
           </ul>
           <div className="text-center">
+            <Link href="withblockchain">
             <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg font-medium">
-              <Link href="withblockchain/login">With BlockChain</Link>
+              With BlockChain
             </button>
+            </Link>
           </div>
         </div>
 
@@ -70,9 +72,11 @@ export default function LoginOptions() {
             </li>
           </ul>
           <div className="text-center">
+            <Link href="withfirebase">
             <button className="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-lg font-medium">
-              <Link href="withfirebase/resetpage/login">With Firebase</Link>
+              With Firebase
             </button>
+            </Link>
           </div>
         </div>
       </div>

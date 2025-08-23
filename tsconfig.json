@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/withblockchain/login/page.jsx", "app/withfirebase/resetpage/login/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/withblockchain/login/page.jsx", "app/withfirebase/resetpage/login/page.jsx", "app/withfirebase/page.jsx"],
   "exclude": ["node_modules"]
 }

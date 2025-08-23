@@ -14,12 +14,12 @@ export default function Home() {
     <main
       className={`${montserrat.className} bg-[#0f172a] text-white min-h-screen font-sans`}
     >
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <Features />
       <Product />
       <Community />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

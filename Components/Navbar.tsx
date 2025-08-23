@@ -24,9 +24,10 @@ export default function Navbar() {
 
             {/* Desktop Buttons */}
             <div className="hidden md:flex gap-4">
+                <Link href="/login">
                 <button className="text-sm px-4 py-2 border border-blue-500 rounded-lg hover:bg-blue-500/10 transition-all duration-300">
-                    <Link href="/login">Login</Link>
-                </button>
+                    Login
+                </button></Link>
                 <button className="bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300">
                     Buy Now
                 </button>
