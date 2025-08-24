@@ -13,11 +13,12 @@ export default function Navbar() {
     }
 
     return (
-        <nav className="sticky top-0 z-50 flex justify-between items-center px-4 sm:px-8 py-4 bg-[#0f172a]/95 backdrop-blur-sm border-b border-gray-700 cursor-pointer">
-            <div onClick={handleHome} className="flex items-center gap-2 text-xl font-bold">
+        <nav className="sticky top-0 z-50 flex justify-between items-center px-4 sm:px-8 py-4 bg-[#0f172a]/95 backdrop-blur-sm border-b border-gray-700">
+            <div onClick={handleHome} className="flex items-center gap-2 text-xl font-bold hover:cursor-pointer">
                 <span className="text-blue-500">
                     <FaHome size={30} />
-                    </span> SMART EVM
+                </span>
+                SMART EVM
             </div>
 
             {/* Desktop Navigation */}
@@ -31,10 +32,11 @@ export default function Navbar() {
 
             {/* Desktop Buttons */}
             <div className="hidden md:flex gap-4">
-                <Link href="/login">
-                    <button className="text-sm px-4 py-2 border border-blue-500 rounded-lg hover:bg-blue-500/10 hover:cursor-pointer transition-all duration-300">
+                <Link href="/login" draggable={false} className="text-sm px-4 py-2 border border-blue-500 rounded-lg hover:bg-blue-500/10 hover:cursor-pointer transition-all duration-300">
+                    {/* <button className="text-sm px-4 py-2 border border-blue-500 rounded-lg hover:bg-blue-500/10 hover:cursor-pointer transition-all duration-300">
                         Login
-                    </button>
+                    </button> */}
+                    Login
                 </Link>
                 <button className="bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 hover:cursor-pointer transition-colors duration-300">
                     Buy Now

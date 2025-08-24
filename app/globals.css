@@ -49,3 +49,34 @@ body {
 .text-secondary {
   color: var(--secondary);
 }
+
+.border-gradient-spin {
+  position: relative;
+  z-index: 0;
+}
+
+.border-gradient-spin:hover::before {
+  content: "";
+  position: absolute;
+  top: -25%; /*border thickness*/
+  left: -25%;
+  height: 150%;
+  width: 150%;
+  /* right: -3px;
+  bottom: -3px; */
+  border-radius: inherit;
+  background: conic-gradient(
+      oklch(62.3% 0.214 259.815) 0deg,
+      /* rgba(192, 132, 252, 0.4) 0deg, */
+      transparent 80deg
+  );
+  animation: spin-border 2s linear infinite;
+  z-index: -1;
+}
+
+@keyframes spin-border {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+

@@ -50,9 +50,9 @@ export default function Product() {
                 <div className="absolute top-4 right-4 w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
                 <div className="absolute bottom-4 left-4 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
             </div> */}
-            <div className="relative bg-white bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl shadow-2xl dark:shadow-gray-900/50 p-8 transform hover:scale-105 transition-all duration-500 w-full max-w-md">
-            <img src="evmimage.png" alt="" className="w-full h-full rounded-2xl" />
-                </div>
+            <div className="relative bg-white bg-gradient-to-b from-slate-700 to-slate-800 rounded-2xl shadow-sm hover:shadow-blue-500 dark:shadow-gray-900/50 p-[5px] transform hover:scale-105 transition-all duration-500 max-w-md border-gradient-spin overflow-hidden">
+                <img src="evmimage.png" alt="" className="h-[75vh] rounded-2xl" draggable={false} />
+            </div>
         </section>
     );
 }
