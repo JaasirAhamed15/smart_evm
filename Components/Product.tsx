@@ -4,7 +4,7 @@ export default function Product() {
             id="Product"
             className="px-4 sm:px-10 py-16 flex flex-col md:flex-row justify-between items-center gap-10"
         >
-            <div className="max-w-lg">
+            <div className="max-w-lg min-w-3xl">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4">NovoTech EVM</h2>
                 <p className="text-gray-300 mb-6 leading-relaxed">
                     The next generation of electronic voting machines powered by blockchain technology.
@@ -22,18 +22,19 @@ export default function Product() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <ul className="text-gray-300 space-y-2 list-disc pl-5">
-                        <li>15-inch HD Touchscreen Display</li>
-                        <li>ARM Cortex-A78 Octa-core Processor</li>
-                        <li>8GB RAM + 256GB Storage</li>
-                        <li>Built-in Thermal Printer</li>
+                        <li>Blockchain-powered EVM using Ethereum</li>
+                        <li>Ganache for blockchain development & testing</li>
+                        <li>Centralized server for blockchain vote storage</li>
+                        <li>ESP-32 based Smart EVM with unique ID</li>
                     </ul>
                     <ul className="text-gray-300 space-y-2 list-disc pl-5">
-                        <li>Biometric Scanner Integration</li>
-                        <li>Wi-Fi 6 + 5G Connectivity</li>
-                        <li>12-hour Battery Backup</li>
-                        <li>IP65 Weather Protection</li>
+                        <li>Web portal for voter login & analytics</li>
+                        <li>Dual EVM Models: Blockchain & Non-Blockchain</li>
+                        <li>Firebase database integration for non-blockchain EVM</li>
+                        <li>Secure, transparent, and tamper-resistant design</li>
                     </ul>
                 </div>
+
             </div>
 
             <div className="relative bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-500 w-full max-w-md">

@@ -32,20 +32,20 @@ export default function Footer() {
                     <h3 className="font-bold text-lg mb-4">Contact Info</h3>
                     <ul className="text-gray-400 space-y-3">
                         <li className="hover:text-blue-400 transition-colors duration-300">
-                            support@smartevm.com
+                            teamcodesages@gmail.com
                         </li>
                         <li className="hover:text-blue-400 transition-colors duration-300">
-                            +1 (555) 123-4567
+                            +91 9363679092
                         </li>
                         <li className="hover:text-blue-400 transition-colors duration-300">
-                            123 Innovation Drive, Tech City, TC 12345
+                            E-Yantra Lab, Mount Zion College of Engineering and Technology, Pudukkottai, Tamilnadu, India
                         </li>
                     </ul>
                 </div>
             </div>
 
             <div className="text-center text-gray-500 mt-8 pt-6 border-t border-gray-800 text-sm">
-                © 2024 SMART EVM. All rights reserved.
+                © 2025 SMART EVM. All rights reserved.
             </div>
         </footer>
     );
