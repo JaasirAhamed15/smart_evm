@@ -24,3 +24,28 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+:root {
+  --primary: #52B788;   /* Your main green */
+  --secondary: #40916C; /* A darker green */
+  --accent: #74C69D;    /* Accent */
+  --background: #F8F9FA; /* Light background */
+  --text: #1B4332;      /* Text color */
+}
+
+/* Utility classes */
+.bg-primary {
+  background-color: var(--primary);
+}
+.text-primary {
+  color: var(--primary);
+}
+.border-primary {
+  border-color: var(--primary);
+}
+.bg-secondary {
+  background-color: var(--secondary);
+}
+.text-secondary {
+  color: var(--secondary);
+}

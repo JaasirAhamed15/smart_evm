@@ -3,14 +3,21 @@ import { useState } from "react";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 import MobileMenu from "./MobileMenu";
-
+import { useRouter } from "next/navigation";
+import {FaHome} from 'react-icons/fa'
 export default function Navbar() {
+    const router=useRouter();
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const handleHome=()=>{
+        router.push("/");
+    }
 
     return (
-        <nav className="sticky top-0 z-50 flex justify-between items-center px-4 sm:px-8 py-4 bg-[#0f172a]/95 backdrop-blur-sm border-b border-gray-700">
-            <div className="flex items-center gap-2 text-xl font-bold">
-                <span className="text-blue-500">≡</span> SMART EVM
+        <nav className="sticky top-0 z-50 flex justify-between items-center px-4 sm:px-8 py-4 bg-[#0f172a]/95 backdrop-blur-sm border-b border-gray-700 cursor-pointer">
+            <div onClick={handleHome} className="flex items-center gap-2 text-xl font-bold">
+                <span className="text-blue-500">
+                    <FaHome size={30} />
+                    </span> SMART EVM
             </div>
 
             {/* Desktop Navigation */}
