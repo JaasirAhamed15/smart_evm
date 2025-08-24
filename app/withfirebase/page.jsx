@@ -39,7 +39,7 @@ export default function WithFirebase() {
         </div>
       </div>
 
-      <div className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl dark:shadow-gray-900/50 p-8 transform hover:scale-105 transition-all duration-500 w-full max-w-md">
+      {/* <div className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl dark:shadow-gray-900/50 p-8 transform hover:scale-105 transition-all duration-500 w-full max-w-md">
         <svg className="w-full h-64" viewBox="0 0 400 300" fill="none">
           <rect x="50" y="60" width="300" height="180" fill="#e5e7eb" rx="12"></rect>
           <rect x="70" y="80" width="100" height="140" fill="#1f2937" rx="8"></rect>
@@ -68,7 +68,10 @@ export default function WithFirebase() {
             <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
           </svg>
         </div>
-      </div>
+      </div> */}
+      <div className="relative bg-white bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl shadow-2xl dark:shadow-gray-900/50 p-8 transform hover:scale-105 transition-all duration-500 w-full max-w-md">
+            <img src="evmimage.png" alt="" className="w-full h-full rounded-2xl" />
+                </div>
     </div>
   );
 }
