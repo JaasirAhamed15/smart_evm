@@ -114,6 +114,8 @@ export default function RegisterPage() {
         >
           Register
         </button>
+        <button className="bg-gradient-to-r mt-10 from-violet-700 to-blue-500 rounded-2xl w-full py-3 text-lg font-semibold" onClick={()=>{router.back()}}>back</button>
+
 
         {error && <p className="mt-4 text-red-600">{error}</p>}
         {success && <p className="mt-4 text-green-600">{success}</p>}

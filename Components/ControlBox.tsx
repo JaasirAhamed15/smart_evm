@@ -23,7 +23,7 @@ export default function ControlBox() {
     ];
 
     return (
-        <div className="flex justify-center items-center bg-transparent">
+        <div className="hidden lg:flex justify-center items-center bg-transparent">
             <div className="relative w-[30vw] aspect-[3/4] bg-sky-400 rounded-xl shadow-xl p-4">
                 {/* Blue box screws */}
                 <span className="absolute top-2 left-2 w-4 h-4 rounded-full bg-gray-400" />
@@ -50,7 +50,7 @@ export default function ControlBox() {
                                 {/* Button */}
                                 <button
                                     onClick={() => handleClick(i)}
-                                    className="w-[2vw] h-[4vh] rounded-full bg-black shadow-md active:translate-y-[1px] focus:outline-none cursor-pointer"
+                                    className="w-[2vw] h-[4vh] rounded-full bg-black shadow-md active:translate-y-[1px] focus:outline-none cursor-pointer hover:scale-105"
                                     aria-label={`Button for ${name}`}
                                 />
 
@@ -58,7 +58,7 @@ export default function ControlBox() {
                                 <span
                                     className={`w-[1vw] h-[2vh] rounded-full shadow-inner ${activeLed === i
                                         ? "bg-red-600 animate-pulse shadow-red-800 shadow-md"
-                                        : "bg-gray-300 shadow-gray-500"
+                                        : "bg-gray-300 shadow-gray-500 hover:bg-green-300"
                                         }`}
                                 />
                             </div>

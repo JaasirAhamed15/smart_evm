@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { ref, get, update } from "firebase/database";
 import { db } from "@/lib/firebase";  // ✅ use centralized firebase config
+import { useRouter } from "next/navigation";
 
 export default function ConductElectionPage() {
   const [espid, setEspid] = useState("");
@@ -10,7 +11,7 @@ export default function ConductElectionPage() {
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
   const [showModal, setShowModal] = useState(false);
-
+  const router = useRouter();
   const handleLogin = async () => {
     setLoading(true);
     setErrorMessage(null);
@@ -104,6 +105,8 @@ export default function ConductElectionPage() {
             "Conduct Election"
           )}
         </button>
+        <button className="bg-gradient-to-r mt-5 from-violet-700 to-blue-500 rounded-2xl w-full py-3 text-lg font-semibold" onClick={()=>{router.back()}}>back</button>
+
 
         {errorMessage && (
           <div className="mt-4 text-red-600 font-medium">{errorMessage}</div>

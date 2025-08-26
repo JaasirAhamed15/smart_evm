@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set, onValue } from "firebase/database";
 import { db } from "@/lib/firebase";
+import { useRouter } from "next/navigation";
+import { constants } from "buffer";
 
 export default function SetVotingFlagPage() {
   const [resetFlag, setResetFlag] = useState(0);
@@ -11,6 +13,7 @@ export default function SetVotingFlagPage() {
   const [successMessage, setSuccessMessage] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);
 
+  const router = useRouter();
   const espid =
     typeof window !== "undefined" ? sessionStorage.getItem("espid") : null;
 
@@ -75,6 +78,8 @@ export default function SetVotingFlagPage() {
             "Reset"
           )}
         </button>
+        <button className="bg-gradient-to-r mt-5 from-violet-700 to-blue-500 rounded-2xl w-full py-3 text-lg font-semibold" onClick={()=>{router.back()}}>back</button>
+
 
         {errorMessage && (
           <div className="mt-4 text-red-600 font-medium">{errorMessage}</div>

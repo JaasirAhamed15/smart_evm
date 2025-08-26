@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, get } from "firebase/database";
 import { db } from "@/lib/firebase";
-
+// import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
   const [espId, setEspId] = useState("");
@@ -43,6 +43,7 @@ export default function LoginPage() {
 
   return (
     <div className="flex items-center justify-center h-screen bg-[#004aad]">
+      
       <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md text-center">
         <h1 className="text-2xl font-bold text-[#004aad] mb-6">Login to Smart EVM</h1>
 
@@ -69,6 +70,7 @@ export default function LoginPage() {
             disabled={loading}
             className="relative w-full py-3 text-lg font-semibold bg-[#fdf212] text-[#004aad] rounded-lg hover:bg-[#004aad] hover:text-[#fdf212] transition disabled:opacity-50"
           >
+            
             {loading ? (
               <span className="absolute inset-0 flex items-center justify-center">
                 <span className="w-6 h-6 border-4 border-white border-t-[#004aad] rounded-full animate-spin"></span>
@@ -77,6 +79,7 @@ export default function LoginPage() {
               "Login"
             )}
           </button>
+          <button className="bg-gradient-to-r from-violet-700 to-blue-500 rounded-2xl w-full py-3 text-lg font-semibold" onClick={()=>{router.back()}}>back</button>
         </form>
 
         {errorMessage && (

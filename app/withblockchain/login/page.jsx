@@ -3,12 +3,13 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { db } from "@/lib/firebase";
 import { ref, get } from "firebase/database";
-
+import { Router } from "next/navigation";
 export default function LoginPage() {
   const [espId, setEspId] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const router = useRouter();
+
 
   const handleLogin = async () => {
     if (!espId || !password) {
@@ -65,6 +66,8 @@ export default function LoginPage() {
         >
           Login
         </button>
+        <button className="bg-gradient-to-r mt-10 from-violet-700 to-blue-500 rounded-2xl w-full py-3 text-lg font-semibold" onClick={()=>{router.back()}}>back</button>
+
 
         {error && <p className="mt-4 text-red-600">{error}</p>}
       </div>
