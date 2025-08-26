@@ -4,7 +4,7 @@ export default function Product() {
             id="Product"
             className="px-4 sm:px-10 py-16 flex flex-col md:flex-row justify-between items-center gap-10"
         >
-            <div className="max-w-lg min-w-3xl">
+            <div className="max-w-lg md:min-w-3xl">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4">NovoTech EVM</h2>
                 <p className="text-gray-300 mb-6 leading-relaxed">
                     The next generation of electronic voting machines powered by blockchain technology.
@@ -50,7 +50,7 @@ export default function Product() {
                 <div className="absolute top-4 right-4 w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
                 <div className="absolute bottom-4 left-4 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
             </div> */}
-            <div className="relative bg-white bg-gradient-to-b from-slate-700 to-slate-800 rounded-2xl shadow-sm hover:shadow-blue-500 dark:shadow-gray-900/50 p-[5px] transform hover:scale-105 transition-all duration-500 max-w-md border-gradient-spin overflow-hidden">
+            <div className="relative bg-white bg-gradient-to-b from-slate-700 to-slate-800 rounded-2xl shadow-sm hover:shadow-[#fd5da8] dark:shadow-gray-900/50 p-[5px] transform hover:scale-105 transition-all duration-500 max-w-md border-gradient-spin overflow-hidden">
                 <img src="evmimage.png" alt="" className="h-[75vh] rounded-2xl" draggable={false} />
             </div>
         </section>

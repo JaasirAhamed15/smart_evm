@@ -1,3 +1,4 @@
+import ControlBox from "./ControlBox";
 export default function Hero() {
     return (
         <section
@@ -46,8 +47,11 @@ export default function Hero() {
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
                 </div></div> */}
 
-            <div className="relative bg-white bg-gradient-to-b from-slate-700 to-slate-800 rounded-2xl shadow-sm hover:shadow-blue-500 dark:shadow-gray-900/50 p-[5px] transform hover:scale-105 transition-all duration-500 max-w-md border-gradient-spin overflow-hidden">
+            {/* <div className="relative bg-white bg-gradient-to-b from-slate-700 to-slate-800 rounded-2xl shadow-sm hover:shadow-[#fd5da8] dark:shadow-gray-900/50 p-[5px] transform hover:scale-105 transition-all duration-500 max-w-md border-gradient-spin overflow-hidden">
                 <img src="evmimage.png" alt="" className="h-[75vh] rounded-2xl" draggable={false} />
+            </div> */}
+            <div className="p-10">
+                <ControlBox />
             </div>
 
         </section>

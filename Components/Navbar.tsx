@@ -36,7 +36,7 @@ export default function Navbar() {
                     {/* <button className="text-sm px-4 py-2 border border-blue-500 rounded-lg hover:bg-blue-500/10 hover:cursor-pointer transition-all duration-300">
                         Login
                     </button> */}
-                    Login
+                    Explore
                 </Link>
                 <button className="bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 hover:cursor-pointer transition-colors duration-300">
                     Buy Now

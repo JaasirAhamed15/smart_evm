@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 
 export default function WithBlockchain() {
   const router = useRouter();
-  
+
   const handleLoginClick = () => {
     // redirct to flutterapp
     router.push("https://smartevm.in/Blockchain/index.html");
@@ -28,8 +28,8 @@ export default function WithBlockchain() {
         </h1>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
-          <button 
-            onClick={handleLoginClick} 
+          <button
+            onClick={handleLoginClick}
             className="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300 font-medium"
           >
             View Votes
@@ -38,7 +38,7 @@ export default function WithBlockchain() {
             Reset page
           </button>
 
-          <button onClick={handleResetClick} className="border border-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300 font-medium">
+          <button onClick={handleRegisterClick} className="border border-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300 font-medium">
             Register page
           </button>
         </div>
@@ -74,9 +74,9 @@ export default function WithBlockchain() {
           </svg>
         </div>
       </div> */}
-      <div className="relative bg-white bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl shadow-2xl dark:shadow-gray-900/50 p-8 transform hover:scale-105 transition-all duration-500 w-full max-w-md">
-            <img src="evmimage.png" alt="" className="w-full h-full rounded-2xl" />
-                </div>
+      <div className="relative bg-white bg-gradient-to-b from-slate-700 to-slate-800 rounded-2xl shadow-sm hover:shadow-[#fd5da8] dark:shadow-gray-900/50 p-[5px] transform hover:scale-105 transition-all duration-500 max-w-md border-gradient-spin overflow-hidden">
+        <img src="evmimage.png" alt="" className="h-[75vh] rounded-2xl" draggable={false} />
+      </div>
     </div>
   );
 }

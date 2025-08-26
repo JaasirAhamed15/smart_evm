@@ -66,11 +66,12 @@ body {
   bottom: -3px; */
   border-radius: inherit;
   background: conic-gradient(
-      oklch(62.3% 0.214 259.815) 0deg,
+      #ff1694 0deg,
+      #FF6EC7 10deg,
       /* rgba(192, 132, 252, 0.4) 0deg, */
       transparent 80deg
   );
-  animation: spin-border 2s linear infinite;
+  animation: spin-border 4s linear infinite;
   z-index: -1;
 }
 

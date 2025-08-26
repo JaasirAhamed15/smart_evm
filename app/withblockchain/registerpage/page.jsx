@@ -2,16 +2,42 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function LoginPage() {
+export default function RegisterPage() {
   const [espId, setEspId] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmpassword, setConfirmpassword] = useState("");
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const router = useRouter();
 
-  const handleLogin = async () => {
-    console.log(espId+password);
-    if (!espId || !password) {
-      setError("Please enter both fields");
+  // ✅ Password validation rules
+  const validatePassword = (pwd) => {
+    if (pwd.length < 6) return "Password must be at least 6 characters long.";
+    if (!/[A-Z]/.test(pwd)) return "Password must contain at least one uppercase letter.";
+    if (!/[0-9]/.test(pwd)) return "Password must contain at least one number.";
+    return "";
+  };
+
+  const handleRegister = async () => {
+    setError("");
+    setSuccess("");
+
+    // Empty field validation
+    if (!espId || !password || !confirmpassword) {
+      setError("All fields are required.");
+      return;
+    }
+
+    // Password validation
+    const pwdError = validatePassword(password);
+    if (pwdError) {
+      setError(pwdError);
+      return;
+    }
+
+    // Confirm password check
+    if (confirmpassword !== password) {
+      setError("Passwords do not match.");
       return;
     }
 
@@ -22,25 +48,31 @@ export default function LoginPage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          espid: espId,
+          espId: espId,
           password: password,
         }),
       });
 
-      const data = await response.json();
-      
+      let data;
+      try {
+        data = await response.json();
+      } catch {
+        throw new Error("Invalid response from server");
+      }
 
       if (response.ok) {
-        // ✅ Successful login
-        console.log("Login Success:", data);
-        setError(""); 
-        router.push("/dashboard"); // redirect after success
+        console.log("✅ Registration Success:", data);
+        setSuccess("Registration successful! Redirecting...");
+        setError("");
+
+        setTimeout(() => {
+          router.push("/dashboard");
+        }, 1500); // wait 1.5s before redirect
       } else {
-        // ❌ Server error (wrong credentials or not registered)
-        setError(data.message || "ESP ID does not exist!");
+        setError(data.message || "ESP ID already registered!");
       }
     } catch (err) {
-      console.error("Error:", err);
+      console.error("❌ Error:", err);
       setError("Something went wrong. Please try again.");
     }
   };
@@ -49,7 +81,7 @@ export default function LoginPage() {
     <div className="flex justify-center items-center h-screen bg-[#004aad]">
       <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-md text-center">
         <h1 className="text-2xl font-bold text-[#004aad] mb-6">
-          Login to Smart EVM (Blockchain)
+          Register Smart EVM (Blockchain)
         </h1>
 
         <input
@@ -68,14 +100,23 @@ export default function LoginPage() {
           className="w-full text-black p-3 mb-4 border border-[#004aad] rounded-lg text-lg"
         />
 
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          value={confirmpassword}
+          onChange={(e) => setConfirmpassword(e.target.value)}
+          className="w-full text-black p-3 mb-4 border border-[#004aad] rounded-lg text-lg"
+        />
+
         <button
-          onClick={handleLogin}
+          onClick={handleRegister}
           className="w-full p-3 text-lg font-semibold bg-[#fdf212] text-[#004aad] rounded-lg hover:bg-[#004aad] hover:text-[#fdf212] transition"
         >
-          Login
+          Register
         </button>
 
         {error && <p className="mt-4 text-red-600">{error}</p>}
+        {success && <p className="mt-4 text-green-600">{success}</p>}
       </div>
     </div>
   );
