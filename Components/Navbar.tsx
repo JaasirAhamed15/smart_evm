@@ -16,7 +16,7 @@ export default function Navbar() {
         <nav className="sticky top-0 z-50 flex justify-between items-center px-4 sm:px-8 py-4 bg-[#0f172a]/95 backdrop-blur-sm border-b border-gray-700">
             <div onClick={handleHome} className="flex items-center gap-2 text-xl font-bold hover:cursor-pointer">
                 <span className="text-blue-500">
-                    <FaHome size={30} />
+                    <img className="w-15 h-15" src="https://cdn3d.iconscout.com/3d/premium/thumb/voting-machine-3d-icon-download-in-png-blend-fbx-gltf-file-formats--electronic-democracy-evm-political-tactic-pack-politics-icons-6152132.png" alt="" />
                 </span>
                 SMART EVM
             </div>
