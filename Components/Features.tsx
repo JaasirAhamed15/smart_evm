@@ -1,5 +1,5 @@
 import { FaLink, FaClock, FaCloud, FaUser, FaCog, FaShieldAlt } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export default function Features() {
     const features = [
@@ -35,8 +35,8 @@ export default function Features() {
         },
     ];
 
-    // Animation Variants
-    const container = {
+    // Animation Variants (typed correctly ✅)
+    const container: Variants = {
         hidden: { opacity: 0 },
         show: {
             opacity: 1,
@@ -46,7 +46,7 @@ export default function Features() {
         },
     };
 
-    const item = {
+    const item: Variants = {
         hidden: { opacity: 0, y: 50, scale: 0.9 },
         show: {
             opacity: 1,
@@ -62,7 +62,7 @@ export default function Features() {
 
     return (
         <section id="Features" className="px-4 sm:px-10 py-16 bg-[#111827]">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 text-white">
                 Advanced Security Features
             </h2>
             <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
@@ -84,7 +84,7 @@ export default function Features() {
                         className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-blue-500 hover:outline-1 outline-blue-500 transform hover:scale-105 transition-all duration-300 h-full flex flex-col"
                     >
                         {f.icon}
-                        <h3 className="text-lg font-semibold mb-2">{f.title}</h3>
+                        <h3 className="text-lg font-semibold mb-2 text-white">{f.title}</h3>
                         <p className="text-gray-400 flex-grow">{f.desc}</p>
                     </motion.div>
                 ))}
