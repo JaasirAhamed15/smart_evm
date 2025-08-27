@@ -6,7 +6,8 @@ export default function WithBlockchain() {
 
   const handleLoginClick = () => {
     // redirct to flutterapp
-    router.push("https://smartevm.in/Blockchain/index.html");
+    // router.push("https://smartevmtestsite.web.app/");
+    window.open("https://smartevmtestsite.web.app/", "_blank");
   };
   const handleResetClick = () => {
     // redirct to flutterapp
