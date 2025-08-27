@@ -33,14 +33,14 @@ export default function WithBlockchain() {
             onClick={handleLoginClick}
             className="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300 font-medium"
           >
-            View Votes
+            View Device
           </button>
           <button onClick={handleResetClick} className="border border-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300 font-medium">
             Reset page
           </button>
 
           <button onClick={handleRegisterClick} className="border border-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300 font-medium">
-            Register page
+            Register Device
           </button>
         </div>
       </div>

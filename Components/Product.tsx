@@ -1,4 +1,7 @@
+"use client";
+import { useRouter } from "next/navigation";
 export default function Product() {
+    const router = useRouter();
     return (
         <section
             id="Product"
@@ -12,12 +15,22 @@ export default function Product() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                    <button className="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300 font-medium">
+                    <button onClick={()=>router.push('/buynow')} className="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300 font-medium">
                         Buy Now
                     </button>
-                    <button className="border border-gray-500 px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300 font-medium">
-                        User Manual
-                    </button>
+                    <button 
+  onClick={() => {
+    const link = document.createElement('a');
+    link.href = 'User-Manual.pdf';
+    link.download = 'user-manual.pdf'; // This will be the suggested filename for download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }}
+  className="border border-gray-500 px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300 font-medium"
+>
+  User Manual
+</button>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

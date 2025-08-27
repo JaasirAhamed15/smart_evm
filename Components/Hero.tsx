@@ -1,5 +1,13 @@
 import ControlBox from "./ControlBox";
+import { useRouter } from "next/navigation";
+
 export default function Hero() {
+    const router = useRouter();
+
+  const handleLoginClick = () => {
+
+    router.push("/login");
+  };
     return (
         <section
             id="Hero"
@@ -16,7 +24,7 @@ export default function Hero() {
                     monitoring and advanced security features.
                 </p>
                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                    <button className="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600  transform hover:scale-110 transition-all duration-300 font-medium">
+                    <button onClick={handleLoginClick} className="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600  transform hover:scale-110 transition-all duration-300 font-medium">
                         Get Started
                     </button>
                     <button className="border border-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300 font-medium">
