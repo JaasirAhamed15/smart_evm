@@ -68,7 +68,7 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="relative w-full py-3 text-lg font-semibold bg-[#fdf212] text-[#004aad] rounded-lg hover:bg-[#004aad] hover:text-[#fdf212] transition disabled:opacity-50"
+            className="relative cursor-pointer w-full py-3 text-lg font-semibold bg-[#fdf212] text-[#004aad] rounded-lg hover:bg-[#004aad] hover:text-[#fdf212] transition disabled:opacity-50"
           >
             
             {loading ? (
@@ -79,7 +79,7 @@ export default function LoginPage() {
               "Login"
             )}
           </button>
-          <button className="bg-gradient-to-r from-violet-700 to-blue-500 rounded-2xl w-full py-3 text-lg font-semibold" onClick={()=>{router.back()}}>back</button>
+          <button className="cursor-pointer bg-gradient-to-r from-violet-700 to-blue-500 rounded-2xl w-full py-3 text-lg font-semibold" onClick={()=>{router.back()}}>back</button>
         </form>
 
         {errorMessage && (

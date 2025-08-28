@@ -27,14 +27,14 @@ export default function WithFirebase() {
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
           <button
             onClick={handleLoginClick}
-            className="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300 font-medium"
+            className="cursor-pointer bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300 font-medium"
           >
             View Device
           </button>
-          <button onClick={handleResetClick} className="border border-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300 font-medium">
+          <button onClick={handleResetClick} className="cursor-pointer border border-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300 font-medium">
             Reset page
           </button>
-          <button onClick={handleNewelectionClick} className="border border-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300 font-medium">
+          <button onClick={handleNewelectionClick} className="cursor-pointer border border-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300 font-medium">
             New Election
           </button>
         </div>

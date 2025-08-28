@@ -97,7 +97,7 @@ export default function ConductElectionPage() {
         <button
           onClick={handleLogin}
           disabled={loading}
-          className="relative w-full py-3 rounded-lg text-lg font-semibold transition-colors bg-[#fdf212] text-[#004aad] hover:bg-[#004aad] hover:text-[#fdf212]"
+          className="relative cursor-pointer w-full py-3 rounded-lg text-lg font-semibold transition-colors bg-[#fdf212] text-[#004aad] hover:bg-[#004aad] hover:text-[#fdf212]"
         >
           {loading ? (
             <div className="w-6 h-6 border-4 border-t-[#004aad] border-gray-200 rounded-full animate-spin mx-auto" />
@@ -105,7 +105,7 @@ export default function ConductElectionPage() {
             "Conduct Election"
           )}
         </button>
-        <button className="bg-gradient-to-r mt-5 from-violet-700 to-blue-500 rounded-2xl w-full py-3 text-lg font-semibold" onClick={()=>{router.back()}}>back</button>
+        <button className="bg-gradient-to-r mt-5 from-violet-700 to-blue-500 rounded-2xl cursor-pointer w-full py-3 text-lg font-semibold" onClick={()=>{router.back()}}>back</button>
 
 
         {errorMessage && (

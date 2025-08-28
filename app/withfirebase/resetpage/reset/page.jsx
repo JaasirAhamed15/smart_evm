@@ -66,7 +66,7 @@ export default function SetVotingFlagPage() {
         <button
           onClick={handleSetFlag}
           disabled={loading}
-          className={`relative w-full py-3 rounded-lg text-lg font-semibold transition-colors ${
+          className={`relative cursor-pointer w-full py-3 rounded-lg text-lg font-semibold transition-colors ${
             resetFlag === 1
               ? "bg-[#fdf212] text-[#004aad] hover:bg-[#004aad] hover:text-[#fdf212]"
               : "bg-gray-300 text-gray-600 cursor-not-allowed"

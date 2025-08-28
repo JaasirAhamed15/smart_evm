@@ -12,14 +12,15 @@ export default function ControlBox() {
 
     // Add candidate names (10 for 10 rows)
     const candidates = [
-        "Alice",
-        "Bob",
-        "Charlie",
-        "Diana",
-        "Ethan",
-        "Fiona",
-        "George",
-        "Hannah",
+        "Arunagiri",
+        "Jaasir",
+        "Lakshman",
+        "Mathan",
+        "Vijay",
+        "Kavitha",
+        "Ramesh",
+        "Lakshmi",
+
     ];
 
     return (

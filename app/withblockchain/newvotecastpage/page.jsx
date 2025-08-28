@@ -55,7 +55,7 @@ export default function NewVoteCastPage() {
         <button
           onClick={castVote}
           disabled={resetFlag !== 1}
-          className={`w-full p-3 text-lg font-semibold rounded-lg transition
+          className={`w-full cursor-pointer p-3 text-lg font-semibold rounded-lg transition
             ${
               resetFlag === 1
                 ? "bg-[#fdf212] text-[#004aad] hover:bg-[#004aad] hover:text-[#fdf212]"
@@ -69,7 +69,7 @@ export default function NewVoteCastPage() {
 
         <button
           onClick={logout}
-          className="w-full p-3 text-lg font-semibold bg-red-500 text-white rounded-lg hover:bg-red-600 mt-6"
+          className="w-full p-3 cursor-pointer text-lg font-semibold bg-red-500 text-white rounded-lg hover:bg-red-600 mt-6"
         >
           Logout
         </button>

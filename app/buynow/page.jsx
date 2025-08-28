@@ -125,7 +125,7 @@ export default function ProductDetails() {
                                 <button 
                                     onClick={handleBuyNow}
                                     disabled={!product.inStock}
-                                    className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                                    className={`px-6 py-3 cursor-pointer rounded-lg font-medium transition-all duration-300 ${
                                         product.inStock 
                                         ? 'bg-blue-500 hover:bg-blue-600 transform hover:scale-105' 
                                         : 'bg-gray-400 cursor-not-allowed'
