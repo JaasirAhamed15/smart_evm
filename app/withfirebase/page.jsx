@@ -7,7 +7,7 @@ export default function WithFirebase() {
   const handleLoginClick = () => {
     // redirct to flutterapp
     // router.push("https://smartevm.in/Smartevm/index.html");
-    window.open("https://smartevm.in/Smartevm/index.html", "_blank");
+    window.open("https://webbuildtest-6e0c1.web.app/", "_blank");
   };
   const handleResetClick = () => {
     // redirct to flutterapp
