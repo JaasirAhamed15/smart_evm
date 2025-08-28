@@ -4,10 +4,10 @@ import { useRouter } from "next/navigation";
 export default function Hero() {
     const router = useRouter();
 
-  const handleLoginClick = () => {
+    const handleLoginClick = () => {
 
-    router.push("/login");
-  };
+        router.push("/login");
+    };
     return (
         <section
             id="Hero"

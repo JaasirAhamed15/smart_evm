@@ -44,9 +44,9 @@ export default function LoginOptions() {
           </ul>
           <div className="text-center">
             <Link href="withblockchain">
-            <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg font-medium hover:cursor-pointer">
-              With BlockChain
-            </button>
+              <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg font-medium hover:cursor-pointer">
+                BlockChain
+              </button>
             </Link>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function LoginOptions() {
               <span className="text-2xl">🔥</span>
             </div>
           </div>
-          <h2 className="text-2xl font-semibold text-center mb-4">Login with Firebase</h2>
+          <h2 className="text-2xl font-semibold text-center mb-4">Login without Blockchain</h2>
           <p className="text-gray-400 text-center mb-6">
             Traditional authentication with Google Firebase. Supports email/password, Google, Facebook,
             and other social login methods.
@@ -76,9 +76,9 @@ export default function LoginOptions() {
           </ul>
           <div className="text-center">
             <Link href="withfirebase">
-            <button className="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-lg font-medium hover:cursor-pointer">
-              With Firebase
-            </button>
+              <button className="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-lg font-medium hover:cursor-pointer">
+                Without Blockchain
+              </button>
             </Link>
           </div>
         </div>
