@@ -34,10 +34,10 @@ export default function SetVotingFlagPage() {
       if (resetFlag === 1) {
         await set(ref(db, flagUrl), 1);
         setSuccessMessage("Vote casted successfully!");
-        setTimeout(() => setSuccessMessage(null), 4000);
+        setTimeout(() => setSuccessMessage(null), 2000);
       } else {
         setErrorMessage("Vote is not selected yet!");
-        setTimeout(() => setErrorMessage(null), 4000);
+        setTimeout(() => setErrorMessage(null), 2000);
       }
     } catch (error) {
       console.error("Error setting flag:", error);

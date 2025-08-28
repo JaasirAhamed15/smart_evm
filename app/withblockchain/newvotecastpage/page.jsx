@@ -31,9 +31,14 @@ export default function NewVoteCastPage() {
 
     try {
       await set(ref(db, "/" + espId + "/flag"), 1);
-      setMessage("✅ Vote has been cast successfully!");
+      setMessage("Vote has been cast successfully!");
+      
+      // Clear message after 2 seconds
+      setTimeout(() => {
+        setMessage("");
+      }, 2000);
     } catch (err) {
-      setMessage("❌ Error casting vote: " + err.message);
+      setMessage("Error casting vote: " + err.message);
     }
   };
 
