@@ -46,6 +46,8 @@ export default function RegisterPage() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "bypass-tunnel-reminder": "true",
+
         },
         body: JSON.stringify({
           espId: espId,
@@ -61,18 +63,18 @@ export default function RegisterPage() {
       }
 
       if (response.ok) {
-        console.log("✅ Registration Success:", data);
+        console.log("Registration Success:", data);
         setSuccess("Registration successful! Redirecting...");
         setError("");
 
         setTimeout(() => {
-          router.push("/dashboard");
+          router.push("/");
         }, 1500); // wait 1.5s before redirect
       } else {
         setError(data.message || "ESP ID already registered!");
       }
     } catch (err) {
-      console.error("❌ Error:", err);
+      console.error("Error:", err);
       setError("Something went wrong. Please try again.");
     }
   };
