@@ -42,7 +42,7 @@ export default function RegisterPage() {
     }
 
     try {
-      const response = await fetch("http://103.207.1.87:5821/esp/register", {
+      const response = await fetch("https://smartblk.loca.lt/esp/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
